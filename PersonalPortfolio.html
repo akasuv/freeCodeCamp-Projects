@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Personal Portfolio</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			nav {
+				width: 100%;
+				height: 50px;
+				border: 3px solid red;
+				display: flex;
+				justify-content: flex-end;
+				background-color: #E2EAE8;
+				position:fixed;
+			}
+			nav #navbar {
+				color: #367E7F;
+				list-style-type: none;
+				width: 45%;
+				height: 100%;
+				border: 3px solid red;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			#welcome-section {
+				height: 100vh;
+				background-color: #E2EAE8;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#projects {
+				border: 3px solid red;
+			}
+			#projects #main-info {
+				border: 3px solid black;
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 100px;
+			}
+			#projects h2 {
+				margin: 50px auto;
+				border: 3px solid green;
+				text-align: center;
+			}
+			#projects #main-info .project-tile {
+				height: 250px;
+				width: 250px;
+				border: 3px solid #B5D7E4;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				margin: 0 auto;
+			}
+			#projects #main-info .project-tile img {
+				border: 0px solid red;
+			}
+			#projects #main-info .project-tile .name {
+				color: #367E7F;
+				font-size: 23px;
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				border-top: 3px solid #B5D7E4;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul id="navbar">
+				<li>About</li>
+				<li>Work</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+		<div id="welcome-section">
+			<h1>Hi, I'm Akira.</h1>
+			<p>A human</p>
+		</div>
+		<div id="projects">
+			<h2>These are some of my projects..</h2>
+			<div id="main-info">
+				<div class="project-tile">
+					<img src="tributepage.png" width="90%">
+					<p class="name">Tribute Page</p>
+				</div>
+				<div class="project-tile">
+					<img src="tributepage.png" width="90%">
+					<p class="name">Tribute Page</p>
+				</div>
+				<div class="project-tile">
+					<img src="tributepage.png" width="90%">
+					<p class="name">Tribute Page</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
