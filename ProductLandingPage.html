@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product Landing Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body {
+				padding: 0;
+				margin: 0;
+				background-color: #D1D5D9;
+			}
+			header {
+				width: 100%;
+				padding: 15px;
+				border: 0px solid red;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				position: fixed;
+				background-color: #D1D5D8;
+				z-index: 1;
+			}
+			header figure {
+				/* transform: scale(0.3); */
+				width: 30%;
+				border: 0px solid red;
+				position: relative;
+				left: -100px;
+			}
+			header figure #header-img {
+				width: 70%;
+			}
+
+			header #nav-bar {
+				width: 30%;
+				position: relative;
+				right: -100px;
+				border: 0px solid red;
+			}
+			header #nav-bar ul {
+				width: 100%;
+				border: 0px solid red;
+				list-style-type: none;
+				display: flex;
+				justify-content: space-around;
+			}
+			#main {
+				position: relative;
+				top: 100px;
+			}
+			.nav-link {
+				text-decoration: none;
+				color: black;
+			}
+			#title {
+				width: 100%;
+				height: 200px;
+				border: 0px solid red;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			#title #description {
+				font-size: 30px;
+				width: 100%;
+				margin: 10px;
+				border: 0px solid red;
+				text-align: center;
+			}
+			#title #input-form form {
+				width: 100%;
+				height: 100px;
+				margin: 10px;
+				border: 0px solid red;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			#input-form form input {
+				width: 200px;
+				height: 30px;
+				padding: 10px;
+			}
+			#input-form form #submit {
+				background-color: #EBC445;
+				width: 150px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			.product-info {
+				border: 0px solid red;
+				margin: auto;
+				display: flex;
+				justify-content: center;
+				padding: 10px;
+			}
+			.product-info ul li {
+				display: flex;
+				margin: 30px auto;
+			}
+			.product-info .icon {
+				border: 0px solid red;
+				width: 20%;
+				margin-right: 80px;
+				display: flex;
+			}
+			.product-info .icon img {
+				width: 100px;
+				margin: auto;
+			}
+			.product-info .text-detail {
+				border: 0px solid green;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			#video {
+				display: flex;
+				justify-content: center;
+				margin: 30px auto;
+				border: none;
+			}
+			#product-selection {
+				border: 0px solid green;
+			}
+			#product-selection ul {
+				list-style-type: none;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			#product-selection ul .choice {
+				border: 1px solid black;
+				width: 30%;
+				margin-right: 10px;
+				display: flex;
+				flex-direction: column;
+			}
+			#product-selection ul .choice h4 {
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: #AAAAAA;
+			}
+			#product-selection ul .choice ul {
+				width: 50%;
+				height: 250px;
+				display: flex;
+				flex-direction: column;
+				border: 0px solid red;
+				justify-content: space-around;
+				text-align: center;
+				margin: 10px auto;
+			}
+			#product-selection ul .choice ul .price {
+				font-size: 2em;
+			}
+			#product-selection ul .choice ul .text {
+				font-size: 1.1em;
+			}
+			#product-selection ul .choice ul .submit-bt input {
+				width: 100px;
+				height: 40px;
+				font-size: 18px;
+				background-color: #EBC445;
+			}
+
+			footer {
+				width: 90%;
+				background-color: #AAAAAA;
+				margin: 30px auto;
+				padding: 30px;
+				text-align: right;
+			}
+			footer #more-info {
+				width: 100%;
+				border: 0px solid red;
+				display: flex;
+				justify-content: flex-end;
+			}
+			footer #more-info ul {
+				width: 30%;
+				list-style-type: none;
+				border: 0px solid red;
+				display: flex;
+				justify-content: flex-end;
+
+			}
+			footer #more-info ul li {
+				margin-right: 10px;
+			}
+
+			@media (max-width: 799px) {
+				header {
+					flex-direction: column;
+				}
+				header figure {
+					width: 90%;
+					text-align: center;
+					left: 0;
+				}
+				header #nav-bar {
+					width: 90%;
+					right: 0;
+				}
+				header #nav-bar ul {
+					flex-direction: column;
+					text-align: center;
+					font-size: 20px;
+				}
+				#main {
+					top: 150px;
+				}
+				#product-selection ul .choice {
+					width: 70%;
+					margin: 20px auto;
+				}
+				footer #more-info ul {
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header">
+			<figure>
+				<img id="header-img" src="https://i.imgur.com/kZdi8r5.png" alt="logo">
+			</figure>
+			<nav id="nav-bar">
+				<ul>
+					<li><a class="nav-link" href="#features">Features</a></li>
+					<li><a class="nav-link" href="#video">How It Works</a></li>
+					<li><a class="nav-link" href="#product-selection">Pricing</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="main">
+			<div id="title">
+				<div id="description">
+						Handcrafted, home-made masterpieces
+				</div>
+				<div id="input-form">
+					<form  id="form" action="https://www.freecodecamp.com/email-submit">
+					<input name="email" id="email" type="email" placeholder="Enter your email address" required>
+					<input id="submit" type="submit" value="GET STARTED"></input>
+					</form>
+				</div>
+			</div>
+			<div class="product-info" id="features">
+				<ul>
+					<li>
+						<div class="icon"><img src="https://i.imgur.com/KdtPUHF.png"></div>
+						<div class="text-detail">
+							<ul>
+								<li><h3>Premium Materials</h3></li>
+								<li>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+							<div class="icon"><img src="https://i.imgur.com/tZFWrjF.png"></div>
+							<div class="text-detail">
+								<ul>
+									<li><h3>Premium Materials</h3></li>
+									<li>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</li>
+								</ul>
+							</div>
+						</li>
+					<li>
+						<div class="icon"><img src="https://i.imgur.com/vGSvQAu.png"></div>
+						<div class="text-detail">
+							<ul>
+								<li><h3>Premium Materials</h3></li>
+								<li>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<iframe  id="video" width="600" height="315" 
+					src="https://www.youtube.com/embed/y8Yv4pnO7qc">
+				</iframe>
+			</div>
+			<div id="product-selection">
+				<ul>
+					<li class="choice">
+						<h4>TENOR TROMBONE</h4>
+						<ul>
+							
+							<li class="price">$600</li>
+							<li class="text">
+								Lorem ipsum.
+								Lorem ipsum.
+								Lorem ipsum dolor.
+								Lorem ipsum.
+							</li>
+							<li class="submit-bt"><input type="submit" value="SELECT"></li>
+						</ul>
+					</li>
+						<li class="choice">
+						<h4>BASS TROMBONE</h4>
+						<ul>
+							
+							<li class="price">$900</li>
+							<li class="text">
+								Lorem ipsum.
+								Lorem ipsum.
+								Lorem ipsum dolor.
+								Lorem ipsum.
+							</li>
+							<li class="submit-bt"><input type="submit" value="SELECT"></li>
+						</ul>
+					</li>
+						<li class="choice">
+						<h4>VALVE TROMBONE</h4>
+						<ul>	
+							<li class="price">$1200</li>
+							<li class="text">
+								Lorem ipsum.
+								Lorem ipsum.
+								Lorem ipsum dolor.
+								Lorem ipsum.
+							</li>
+							<li class="submit-bt"><input type="submit" value="SELECT"></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<footer>
+				<div id="more-info">
+					<ul>
+						<li>Privacy</li>
+						<li>Terms</li>
+						<li>Contact</li>
+					</ul>
+				</div>
+				<div id="copyright">
+						<p>Copyright 2016, Original Trombones</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

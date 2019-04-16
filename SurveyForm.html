@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #B2D5D1;
+      }
+      h1 {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      #main {
+        background-color: white;
+        width: 80%;
+        margin: 30px auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+      }
+      #main #description {
+        border: 0px solid red;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .input-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        border: 0px solid red;
+        margin: 20px auto;
+      }
+      .input-box label {
+        border: 0px solid green;
+        width: 50%;
+        text-align: right;
+        margin: 10px;
+      }
+      .input-box #name, #email, #number {
+        border: 1px solid grey;
+      }
+      .input-box input {
+        border: 0px solid purple;
+        width: 30%;
+        margin: 5px;
+      }
+      .input-box .dropdown {
+        border: 0px solid purple;
+        /* width: 15%; */
+        margin: 5px;
+      }
+      .input-box p {
+        border: 0px solid green;
+        width: 50%;
+        text-align: right;
+        margin: 10px;
+      }
+      .input-box ul {
+        list-style-type: none;
+        width: 50%;
+        border: 0px solid purple;
+        margin: 5px;
+      }
+      .input-box label input {
+        margin-right: 20px;
+        width: 0;
+      }
+      .input-box textarea {
+        width: 30%;
+        height: 100px;
+        margin: 5px;
+      }
+      .input-box #submit {
+        border: 0px solid red;
+        margin: auto;
+        width: 80px;
+        height: 40px;
+        color: white;
+        background-color: #6CABDB;
+        border-radius: 5px;
+      }
+      @media (max-width: 520px) {
+        .input-box {
+          border: 0px solid red;
+          flex-direction: column;
+        }
+        .input-box label {
+          width: 95%;
+          text-align: left;
+          margin: 5px;
+        }
+        .input-box p {
+          width: 95%;
+          text-align: left;
+          margin: 5px;
+        }
+        .input-box input {
+          width: 80%;
+          height: 30px;
+          margin: 10px;
+        }
+        .input-box .dropdown {
+          border: 0px solid red;
+          width: 50%;
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <header>
+        <h1 id="title">Survey Form</h1></div>
+      </header>
+      <div id="main">
+        <p id="description">Let us know how we can improve freeCodeCamp</p>
+        <form id="survey-form">
+          <div class="input-box">
+            <label id="name-label" for="name">* Name:</label>
+            <input id="name" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <label id="email-label" for="email" >* Email:</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <label id="number-label" for="number">* Age:</label>
+            <input id="number" type="number" placeholder="Age" min="1" max="100" required>
+          </div>
+          <div class="input-box">
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select class="dropdown" id="dropdown" name="role">
+              <option disabled>Select an option</option>
+              <option value="student">Student</option>
+              <option value="full-time-job">Full Time Job</option>
+              <option value="full-time-learner">Full Time Learner</option>
+              <option value="not-to-say">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <p>* How likely is that you would recommend freeCodeCamp to a friend?</p>
+            <ul>
+              <li><label><input name="recommendation" type="radio" value="definitely">Definitely</label></li>
+              <li><label><input name="recommendation" type="radio" value="maybe">Maybe</label></li>
+              <li><label><input name="recommendation" type="radio" value="not-sure">Not sure</label></li>
+            </ul>
+          </div>
+          <div class="input-box">
+            <label for="in-fcc">What do you like most in FCC:</label>
+            <select class="dropdown" id="in-fcc">
+              <option value="">Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="projects">Community</option>
+              <option value="projects">Open Source</option>
+  
+            </select>
+          </div>
+          <div class="input-box">
+            <p>Things that should be improved in the future
+                (Check all that apply):</p>
+            <ul>
+              <li><label><input type="checkbox" value="front-end">Front-end Projects</label></li>
+              <li><label><input type="checkbox" value="back-end">Back-end Projects</label></li>
+              <li><label><input type="checkbox" value="data">Data Visualization</label></li>
+              <li><label><input type="checkbox" value="challenges">Challenges</label></li>
+              <li><label><input type="checkbox" value="community">Open Source Community</label></li>
+              <li><label><input type="checkbox" value="help-rooms">Gitter help rooms</label></li>
+              <li><label><input type="checkbox" value="videos">Videos</label></li>
+              <li><label><input type="checkbox" value="meetups">City Meetups</label></li>
+              <li><label><input type="checkbox" value="wiki">Wiki</label></li>
+              <li><label><input type="checkbox" value="forum">Forum</label></li>
+              <li><label><input type="checkbox" value="courses">Addtional Courses</label></li>
+            </ul>
+          </div>
+          <div class="input-box">
+            <label for="suggestion">Any comments or Suggestions?</label>
+            <textarea placeholder="Enter you comment here..."></textarea>
+          </div>
+          <div class="input-box">
+            <input id="submit" type="submit" value="submit"></input>
+          </div>
+        </form>
+      </div>
+    </body>
+</html>
