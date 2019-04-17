@@ -14,21 +14,24 @@
 			nav {
 				width: 100%;
 				height: 50px;
-				border: 3px solid red;
+				border: 0px solid red;
 				display: flex;
 				justify-content: flex-end;
 				background-color: #E2EAE8;
 				position:fixed;
 			}
 			nav #navbar {
-				color: #367E7F;
 				list-style-type: none;
 				width: 45%;
 				height: 100%;
-				border: 3px solid red;
+				border: 0px solid red;
 				display: flex;
 				justify-content: space-around;
 				align-items: center;
+			}
+			nav #navbar a {
+				color: #367E7F;
+				text-decoration: none;
 			}
 			#welcome-section {
 				height: 100vh;
@@ -39,17 +42,19 @@
 				align-items: center;
 			}
 			#projects {
-				border: 3px solid red;
+				border: 0px solid red;
+				text-align: center;
 			}
 			#projects #main-info {
-				border: 3px solid black;
-				display: flex;
-				flex-wrap: wrap;
-				padding: 0 100px;
+				border: 0px solid black;
+				display: grid;
+				grid-template-columns: repeat(2, 250px);
+				justify-content: center;
+				grid-gap: 30px 10%;
 			}
 			#projects h2 {
 				margin: 50px auto;
-				border: 3px solid green;
+				border: 0px solid green;
 				text-align: center;
 			}
 			#projects #main-info .project-tile {
@@ -58,12 +63,14 @@
 				border: 3px solid #B5D7E4;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-around;
+				justify-content: space-between;
 				align-items: center;
 				margin: 0 auto;
 			}
 			#projects #main-info .project-tile img {
 				border: 0px solid red;
+				width: 95%;
+				margin-top: 20px;
 			}
 			#projects #main-info .project-tile .name {
 				color: #367E7F;
@@ -74,14 +81,83 @@
 				text-align: center;
 				border-top: 3px solid #B5D7E4;
 			}
+			.profile-link {
+				text-decoration: none;
+			}
+			#show-all-bt {
+				font-size: 18px;
+				width: 100px;
+				height: 40px;
+				color: #367E7F;
+				background-color:#B5D7E4;
+				margin: 30px auto;
+			}
+			#contact {
+				width: 100%;
+				height: 80vh;
+				background-color: #D1F5C9;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			#contact #title {
+				border: 0px solid red;
+				text-align: center;
+			}
+			#contact #contact-ways {
+				border: 0px solid red;
+				margin: 80px 0;
+			}
+			#contact #contact-ways ul {
+				list-style-type: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				padding: 0 100px;
+			}
+			#contact #contact-ways ul li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				color: #367E7F;
+				background-color: #D1D5D8;
+				border: 3px solid #9BC499;
+				border-radius: 100px;
+				text-align: center;
+				margin: 10px auto;
+			}
+			#contact #contact-ways ul li #profile-link {
+				text-decoration: none;
+				color: #367E7F;
+			}
+			footer {
+				height: 80px;
+				color: white;
+				background-color: #24303E;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+			}
+			@media (max-width: 800px) {
+				nav #navbar {
+					width: 100%
+				}
+				#projects #main-info {
+					grid-template-columns: 1fr;
+				}
+				#contact #contact-ways {
+					margin: 20px auto;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<nav>
 			<ul id="navbar">
-				<li>About</li>
-				<li>Work</li>
-				<li>Contact</li>
+				<li><a href="#welcome-section">About</a></li>
+				<li><a href="#projects">Work</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 		<div id="welcome-section">
@@ -91,19 +167,51 @@
 		<div id="projects">
 			<h2>These are some of my projects..</h2>
 			<div id="main-info">
-				<div class="project-tile">
-					<img src="tributepage.png" width="90%">
-					<p class="name">Tribute Page</p>
-				</div>
-				<div class="project-tile">
-					<img src="tributepage.png" width="90%">
-					<p class="name">Tribute Page</p>
-				</div>
-				<div class="project-tile">
-					<img src="tributepage.png" width="90%">
-					<p class="name">Tribute Page</p>
-				</div>
+				<a class="profile-link" href="https://codepen.io/wwsu97/pen/Lvjjoj">
+					<div class="project-tile">
+						<img src="tributepage.png" width="90%">
+						<p class="name">Tribute Page</p>
+					</div>
+				</a>
+				<a class="profile-link" href="https://codepen.io/wwsu97/pen/mgqjQb">
+					<div class="project-tile">
+						<img src="https://i.imgur.com/M7xXPxb.png" width="90%">
+						<p class="name">Survey Form</p>
+					</div>
+				</a>
+				<a class="profile-link" href="https://codepen.io/wwsu97/pen/JVOBbL">
+					<div class="project-tile">
+						<img src="https://i.imgur.com/KXymjhv.png" width="90%">
+						<p class="name">Product Landing Page</p>
+					</div>
+				</a>
+				<a class="profile-link" href="https://codepen.io/wwsu97/pen/XQVWga">
+					<div class="project-tile">
+						<img src="https://i.imgur.com/kFSTB2J.png" width="90%">
+						<p class="name">Technical Document Page</p>
+					</div>
+				</a>
+			</div>
+			<a href="https://codepen.io/wwsu97/"><button id="show-all-bt">Show all</button></a>
+		</div>
+		<div id="contact">
+			<div id="title">
+				<h1>Let's work together...</h1>
+				<p>How do you take your coffee?</p>
+			</div>
+			<div id="contact-ways">
+				<ul>
+					<li>Facebook</li>
+					<li><a id="profile-link" href="https://github.com/wwsu97" target="_blank">Github</a></li>
+					<li>Twitter</li>
+					<li>Send a mail</li>
+					<li>Call me</li>
+				</ul>
 			</div>
 		</div>
+		<footer>
+			<p>**This is just a fake portfolio.. All the projects and contact details given are not real..</p>
+			<p>© Created for Wei Su</p>
+		</footer>
 	</body>
 </html>
